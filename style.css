@@ -88,16 +88,19 @@ nav .nav-part-2 i {
   line-height: 1;
 }
 .page1 img {
+  margin-top: 1rem;
   width: 100%;
   border-radius: 1rem;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  aspect-ratio: 2/1;
+  aspect-ratio: 2/1.1;
 }
 
 .page2 {
+  padding-bottom: 4rem;
+  border-bottom: 1px solid #121212;
   width: 100%;
   margin: 2rem 0;
   display: flex;
@@ -164,12 +167,77 @@ nav .nav-part-2 i {
   font-weight: 350;
 }
 
+.page3 {
+  position: relative;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #121212;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+.page3 .first-part {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.page3 .first-part h1 {
+  font-family: "Syne";
+  font-size: 2.7rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.page3 .first-part p {
+  color: rgba(26, 26, 26, 0.8431372549);
+  font-size: 1.5rem;
+}
+.page3 .line {
+  background-color: #191919;
+  height: 1px;
+  width: 100%;
+}
+.page3 .team-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.page3 .team-container .team {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.page3 .team-container .team video {
+  width: 100%;
+  aspect-ratio: 2/1.4;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 1rem;
+  margin-bottom: 0.5rem;
+}
+.page3 .team-container .team h2 {
+  font-family: "Syne";
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.page3 .team-container .team h5 {
+  font-family: "Roboto Mono";
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: rgba(18, 18, 18, 0.8352941176);
+}
+
 @media (min-width: 1200px) {
   body {
     padding: 1rem;
   }
   main {
-    padding: 2rem 3rem;
+    padding: 1rem 3rem;
   }
   .page1 h1 {
     font-size: 7rem;
@@ -184,14 +252,14 @@ nav .nav-part-2 i {
     justify-content: space-between;
   }
   .page2 .top h1 {
-    font-size: 6rem;
+    font-size: 5.8rem;
   }
   .page2 .line {
     width: 1px;
     height: initial;
   }
   .page2 .bottom {
-    width: 30%;
+    width: 35%;
   }
   .page2 .bottom p {
     font-size: 1.25rem;
@@ -199,5 +267,39 @@ nav .nav-part-2 i {
   .page2 .bottom .line {
     width: 100%;
     height: 1px;
+  }
+  .page3 {
+    flex-direction: row;
+    gap: 3rem;
+  }
+  .page3 .first-part {
+    position: sticky;
+    height: -moz-fit-content;
+    height: fit-content;
+    top: 2rem;
+    width: 50%;
+  }
+  .page3 .first-part h1 {
+    font-size: 4rem;
+  }
+  .page3 .first-part p {
+    font-size: 1.6rem;
+  }
+  .page3 .line {
+    height: initial;
+    width: 1px;
+  }
+  .page3 .team-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .page3 .team-container .team {
+    width: calc(50% - 1rem);
+  }
+  .page3 .team-container .team video {
+    aspect-ratio: 2/1.4;
+  }
+  .page3 .team-container .team h2 {
+    font-size: 2rem;
   }
 }
